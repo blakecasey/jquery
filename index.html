@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="jquery-ui/jquery-ui.min.css">
+    <link rel="stylesheet" href="jquery-ui/jquery-ui.structure.css">
+    <link rel="stylesheet" href="jquery-ui/jquery-ui.theme.css">
+    <link rel="stylesheet" href="jquery-ui/jquery-ui.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@500&family=Cormorant+Garamond:wght@300&family=Shadows+Into+Light&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <title>Basic jQuery Practice</title>
+</head>
+  <body>
+
+    <!-- nav header-->
+    <div class="background">
+      <div class="navcontainer">
+        <div class="topnav">
+          <a href="#home">Home</a>
+          <a href="#trips">Trips</a>
+          <a href="#contact">Contact</a>
+          <a href="#about">About</a>
+        </div>
+        <header class="header">TRAVEL THE WORLD</header>
+      </div>
+    </div>
+
+
+
+    <!--- jQuery accordion-->
+<header class="headers"><span class="material-icons" style="font-size: 30px;">place</span>LOCATION OPTIONS</header>
+  <div id="accordion">
+    <h3>Trip 1: Paris</h3>
+    <div>
+      <img src="paris.jpg" width="680px" height="250px">
+      <p>
+        Paris is a diverse and sophisticated city that appeals to the wealthy but can also be enjoyed on a budget. ... French cuisine is also world famous, and you can find some of the best of it in Paris. There is world class shopping and a dynamic fashion scene, and plenty of interesting museums and art galleries.
+      </p>
+    </div>
+    <h3>Trip 2: Hawaii</h3>
+    <div>
+      <img src="hawaii.jpg" width="680px" height="250px">
+      <p>
+        The gorgeous scenery, aloha spirit, stunning beaches, and exciting activities are just a few of the reasons Hawaii is continually rated as a top vacation destination. Plus, it's also the perfect place to relax, unwind and disconnect from your daily routine.
+      </p>
+    </div>
+    <h3>Trip 3: Egypt</h3>
+    <div>
+      <img src="egypt.jpg" width="680px" height="250px">
+      <p>
+        The country that is home to one of Earth's oldest civilizations gave the world one of history's first peace treaties. ... Most economic activity takes place along the Nile River Valley, where the tiny amount of the nation's arable land resides along the banks of the world's longest river.
+      </p>
+    </div>
+  </div>
+
+
+
+
+  <!-- schedule-form-datepicker-->
+
+
+
+    <section id="form1">
+    <header class="headers"><span class="material-icons" style="font-size: 30px;">date_range</span>SCHEDULE YOUR TRIP</header>
+
+<br>
+    <p id="maxcapacity">Max Capacity: 75/100</p>
+    <div id="progressbar"></div>
+
+    <label for="location">Location</label>
+    <select id="location" name="cars" plalceholder="Choose a Location">
+      <option value="paris">Paris</option>
+      <option value="hawaii">Hawaii</option>
+      <option value="egypt">Egypt</option>
+
+
+
+        
+    <form id="fdetail">
+      </select>
+      <p>Date: <input type="text" id="datepicker" placeholder="Choose a Date"></p>
+        <label for="fname">First Name</label>
+        <input type="text" id="fname" name="firstname" placeholder="Enter Your First Name">
+        <label for="lname">Last Name</label>
+        <input type="text" id="lname" name="lastname" placeholder="Enter Your Last Name">
+        <label for="email">Email</label>
+        <input type="text" id="email" name="email" placeholder="Enter Your Email">
+        <input type="submit" id="submit" value="Submit">
+    </form>
+  </section>
+
+<footer>
+  <p>Copyright © 2022</p>
+</footer>
+</body>
+  <script src="js/jquery-3.6.0.js"></script>
+  <script src="jquery-ui/jquery-ui.js"></script>
+  <script>
+      $( function() {
+        $( "#accordion" ).accordion({
+          collapsible: true
+        });
+        $("#datepicker").datepicker();
+        $( "#progressbar" ).progressbar({
+          value: 70
+    });
+        progressbar = $( "#progressbar" ),
+        progressbarValue = progressbar.find( ".ui-progressbar-value" );
+ 
+      if ( target.is( "#progress" ) ) {
+        progressbar.progressbar( "option", "value", false );
+      }
+    });
+      </script>
+  </html>
+
+
+
